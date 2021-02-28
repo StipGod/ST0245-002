@@ -35,10 +35,11 @@ public static int arrayMax(int[] array, int n) {
 }
      
 public static long fibonacci(int n) {
-    if (n <= 1) {
-        return 1 ;  
-    }else{
-        return fibonacci(n-1) + fibonacci(n-2);
+    if(n==0){
+    return 0;
+}else if (n == 1) {
+	    return 1 ;  
+  }else{
+	    return fibonacci(n-1) + fibonacci(n-2);
     }
-  }
 }
