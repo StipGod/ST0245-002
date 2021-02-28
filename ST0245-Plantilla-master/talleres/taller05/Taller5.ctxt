@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Taller5
+comment1.params=array
+comment1.target=int\ suma(int[])
+comment2.params=num
+comment2.target=void\ mul(int)
+comment3.params=array
+comment3.target=int[]\ insertionSort(int[])
+numComments=4
