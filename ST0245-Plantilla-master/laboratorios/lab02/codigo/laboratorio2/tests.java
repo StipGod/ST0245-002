@@ -8,7 +8,7 @@ public class tests {
 
         System.out.println("INSERTION SORT");
 
-        for(int i = 1; i<21;i++){
+        for(int i = 10000; i<30000;i+=1000){
         
         int test[] = new int [i];
         int xd = i-1;
@@ -25,20 +25,21 @@ public class tests {
         
         long total = (fin - inicio);
         
-        int xdxd = i-1;
-        System.out.println("Arreglo "+i);
+        //Esto es para imprimir el arreglo en orden
+        //int xdxd = i-1;
+        //System.out.println("Arreglo "+i);
 
-        while(xdxd>=0){
-            System.out.println("Posicion " +(xdxd+1)+": "+test[xdxd]);
-            xdxd--;
-        }
+        //while(xdxd>=0){
+        //    System.out.println("Posicion " +(xdxd+1)+": "+test[xdxd]);
+        //    xdxd--;
+        //}
         
         System.out.println("Para el arreglo "+i+" El tiempo total fue de " + total + " ms");
         }
 
         System.out.println("MERGE SORT");
 
-        for(int i = 1; i<21;i++){
+        for(int i = 10000000; i<30000000;i+=1000000){
         
             int testV2[] = new int [i];
             int xdV2 = i-1;
@@ -54,14 +55,15 @@ public class tests {
             long finV2 = System.currentTimeMillis();
             
             long totalV2 = (finV2 - inicioV2);
-            
-            int xdxdV2 = i-1;
-            System.out.println("Arreglo "+i);
+
+            //Esto es para imprimir el arreglo en orden
+            //int xdxdV2 = i-1;
+            //System.out.println("Arreglo "+i);
     
-            while(xdxdV2>=0){
-                System.out.println("Posicion " +(xdxdV2+1)+": "+testV2[xdxdV2]);
-                xdxdV2--;
-            }
+            //while(xdxdV2>=0){
+                //System.out.println("Posicion " +(xdxdV2+1)+": "+testV2[xdxdV2]);
+                //xdxdV2--;
+            //}
             
             System.out.println("Para el arreglo "+i+" El tiempo total fue de " + totalV2 + " ms");
         }
