@@ -1,4 +1,4 @@
-package Taller09;
+package taller09;
 
 public class UnaTablaDeHash
 {

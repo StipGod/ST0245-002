@@ -1,4 +1,4 @@
-package Taller09;
+package taller09;
 
 import java.nio.file.Files;
 import java.nio.charset.StandardCharsets;
