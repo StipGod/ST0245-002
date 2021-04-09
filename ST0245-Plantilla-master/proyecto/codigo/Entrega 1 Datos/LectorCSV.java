@@ -6,7 +6,7 @@ public class LectorCSV
 {
     public static void main(String[] args)
     {
-        String path = "/Downloads/New folder/ST0245-Eafit-master/ST0245-Eafit-master/proyecto/datasets/archivosCSV/ganado enfermo CSVs";
+        String path = "ganado enfermo CSVs.cvs";
         String line = "";
         try{
             BufferedReader Br = new BufferedReader(new FileReader(path));
