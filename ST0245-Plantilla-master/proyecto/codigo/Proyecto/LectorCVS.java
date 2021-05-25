@@ -1,4 +1,3 @@
-package Proyecto;
 
 import java.nio.file.Files;
 import java.nio.charset.StandardCharsets;
@@ -8,7 +7,7 @@ import java.io.*;
 
 public class LectorCVS{
 public static void main(String[] args) throws IOException{
-    
+    printMatriz(getDataset("1.cvs"));
 }
 public static String[][] getDataset(String nombreArchivo) throws IOException{
     Path ruta = Paths.get(nombreArchivo); 
@@ -24,6 +23,26 @@ public static String[][] getDataset(String nombreArchivo) throws IOException{
         }
     }
         return matriz;
+}
+public static String getDatasetLz77(String nombreArchivo) throws IOException{
+    Path ruta = Paths.get(nombreArchivo); 
+    String txtString = Files.readString(ruta, StandardCharsets.UTF_8);
+        return txtString;
+}
+public static String[] getDatasetLC(String nombreArchivo) throws IOException{
+    Path ruta = Paths.get(nombreArchivo); 
+    String txtString = Files.readString(ruta, StandardCharsets.UTF_8);
+    String[] txtLineas = txtString.split("\n"); 
+    String[] columnas = txtLineas[0].split(",");
+    String matriz[] = new String[txtLineas.length*columnas.length + 1];
+    matriz[matriz.length-1] = Integer.toString(txtLineas.length);
+    for (int i = 0;i<txtLineas.length;i++){
+        String[] col = txtLineas[i].split(",");
+        for (int j = 0;j<col.length;j++) {
+            matriz[(i*col.length)+j]=col[0];
+        }
+    }
+    return matriz;
 }
 
 public static String toString(String[][] matriz){
